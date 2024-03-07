@@ -49,9 +49,9 @@ export default {
 
     const toggleComplete = (todoItem, index) => {
       const { completed, item } = todoItem
-      todoItem[index].completed = !completed
+      todoItems[index].completed = !completed
       localStorage.removeItem(item)
-      localStorage.setItem(item, JSON.stringify(todoItem[index]))
+      localStorage.setItem(item, JSON.stringify(todoItems[index]))
     }
 
     const clearTodo = () => {
